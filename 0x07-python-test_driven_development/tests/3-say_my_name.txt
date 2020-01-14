@@ -60,8 +60,3 @@ Now use it:
         ...
         TypeError: first_name must be a string
 
-    Empty last name
-        Empty last name
-
-        >>> say_my_name("Alex", "")
-        My name is Alex
