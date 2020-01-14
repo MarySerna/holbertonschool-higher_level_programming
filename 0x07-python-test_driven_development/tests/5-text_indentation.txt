@@ -46,13 +46,7 @@ Now use it:
         ...
         TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-    None
-
-        >>> text_indentation(None)
-        Traceback (most recent call last):
-        ...
-        TypeError: text must be a string
-
     Empty string
 
         >>> text_indentation('')
+
