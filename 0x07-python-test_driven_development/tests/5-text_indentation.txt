@@ -1,0 +1,58 @@
+The ``5-text_indentation`` module
+===============================
+
+Using ``text_indentation`` function
+------------------------------
+
+First import ``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    Correct output
+
+        >>> text_indentation("Hola. Como estas?")
+        Hola.
+        <BLANKLINE>
+        Como estas?
+        <BLANKLINE>
+
+    Correct output
+
+        >>> text_indentation("Bien. Y usted")
+        Bien.
+        <BLANKLINE>
+        Y usted
+
+    Correct output
+
+        >>> text_indentation("Dice:     Holberton School")
+        Dice:
+        <BLANKLINE>
+        Holberton School
+
+    Integer
+
+        >>> text_indentation(2314)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+    Without anything
+
+        >>> text_indentation()
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    None
+
+        >>> text_indentation(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+    Empty string
+
+        >>> text_indentation('')
