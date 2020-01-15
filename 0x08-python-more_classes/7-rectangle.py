@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""
-Module to define a rectangle
+"""Module to define a rectangle
+    Args:
+        width (int): width of a rectangle
+        height (int): height of a rectangle
 """
 
 
@@ -66,7 +68,7 @@ class Rectangle:
     def __str__(self):
         """Prints the rectangle with the character #
         """
-        rect = ''
+        rect= ""
         if self.width == 0 or self.__height == 0:
             return ""
         for i in range(self.__height):
@@ -86,19 +88,3 @@ class Rectangle:
         """
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """Compares the area of two rectangles
-            Args:
-                rect_1: first rectangle
-                rect_2: second rectangle
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError('rect_1 must be an instance of Rectangle')
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        if rect_2.area() > rect_1.area():
-            return rect_2
