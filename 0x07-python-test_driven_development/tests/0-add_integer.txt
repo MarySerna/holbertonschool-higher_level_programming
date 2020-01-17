@@ -121,3 +121,14 @@ Should return the sum only Dict:
     ...
     TypeError: a must be an integer
 
+Should return the sum only Dict:
+    >>> add_integer('casa', )
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Should return the sum only Dict:
+    >>> add_integer(9, 'bonita')
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
