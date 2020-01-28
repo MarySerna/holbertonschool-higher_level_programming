@@ -73,8 +73,8 @@ class Testsquare(unittest.TestCase):
     def test_width(self):
         r1 = Square(5)
         r1.size = 6
-            self.assertEqual(r1.width, 6)
-            self.assertEqual(r1.height, 6)
+        self.assertEqual(r1.width, 6)
+        self.assertEqual(r1.height, 6)
 
     def test_to_dictionary(self):
 
