@@ -1,3 +1,3 @@
 -- Lists all databases
 -- list command 
-show databases;
+SHOW DATABASES;
