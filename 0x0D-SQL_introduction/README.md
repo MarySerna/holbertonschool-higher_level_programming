@@ -1,6 +1,6 @@
-## 0x0D. SQL - Introduction
+# 0x0D. SQL - Introduction
  
-# General
+## General
 - What’s a database
 - What’s a relational database
 - What does SQL stand for
