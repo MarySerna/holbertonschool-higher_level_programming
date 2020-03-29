@@ -14,7 +14,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3], charset="utf8")
     crs = db.cursor()
-    crs.execute("SELECT cities.name FROM cities JOIN states\
+    crs.execute("SELECT cities.name FROM cities INNER JOIN states\
                 ON cities.state_id = states.id\
                 WHERE states.name =%s\
                 ORDER BY cities.id ASC", (st_name,))
@@ -22,6 +22,6 @@ if __name__ == "__main__":
     res = []
     for rw in rows:
         res.append(rw[0])
-        print(",".join(res))
+    print(", ".join(res))
     crs.close()
     db.close()
