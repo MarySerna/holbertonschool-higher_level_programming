@@ -11,12 +11,12 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
 
-    usernm = sys.argv[1]
-    password = sys.argv[2]
+    usrname = sys.argv[1]
+    pswd = sys.argv[2]
     dbname = sys.argv[3]
 
     engine = create_engine('mysql+mysqldb://{:s}:{:s}@localhost/{:s}'
-                           .format(usernm, password, dbname))
+                           .format(usrname, pswd, dbname))
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
