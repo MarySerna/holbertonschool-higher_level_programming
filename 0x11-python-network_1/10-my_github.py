@@ -6,10 +6,10 @@ Python script that takes your Github credentials
 from sys import argv
 import requests
 
-if __name__ == '__main__':
-    import requests
-    from requests.auth import HTTPBasicAuth
-    from sys import argv
-    rqs = requests.get('https://api.github.com/users'.format(argv[1]),
-                       auth=HTTPBasicAuth(argv[1], argv[2]))
-    print(rqs.json().get('id'))
+if __name__ == "__main__":
+    rqs = requests.get('https://api.github.com/user', auth=(argv[1], argv[2]))
+    if "json" not in rqs.headers.get('content-type'):
+        print("Not a valid JSON")
+    else:
+        res = rqs.json()
+        print(res.get('id'))
