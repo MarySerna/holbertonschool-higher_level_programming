@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
-
+Write a script that computes and prints a factorial
 */
 const x = process.argv[2];
 function factorial (x) {
