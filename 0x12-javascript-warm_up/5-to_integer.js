@@ -3,9 +3,10 @@
 Script that prints My number: <first argument converted in integer>
 if the first argument can be converted to an intege
 */
-let arg = process.argv[2];
-if (isNaN(arg)) {
+const arg = process.argv[2];
+const r = parseInt(arg);
+if (isNaN(r)) {
   console.log('Not a number');
 } else {
-  console.log('My number is: ' + arg);
+  console.log('My number is: ' + r);
 }
