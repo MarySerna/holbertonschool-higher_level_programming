@@ -5,12 +5,12 @@ request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
-    let films = JSON.parse(body).results;
+    const films = JSON.parse(body).results;
     let count = 0;
-    for (let filmIndex in films) {
-      let filmChars = films[filmIndex].characters;
-      for (let charIndex in filmChars) {
-        if (filmChars[charIndex].includes('18')) {
+    for (const filmIdx in films) {
+      const filmChar = films[filmIdx].characters;
+      for (const charIdx in filmChar) {
+        if (filmChar[charIdx].includes('18')) {
           count++;
         }
       }
